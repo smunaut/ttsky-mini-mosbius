@@ -447,7 +447,7 @@ C {devices/lab_wire.sym} 740 -690 0 0 {name=p63 sig_type=std_logic lab=v,v}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 2300 -830 0 0 {name=M1
 L=0.5
 W=120
-nf=12
+nf=16
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"

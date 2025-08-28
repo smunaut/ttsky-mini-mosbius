@@ -198,7 +198,7 @@ C {devices/lab_pin.sym} -480 810 2 1 {name=p16 sig_type=std_logic lab=VG}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} -420 810 0 0 {name=M1
 L=0.5
 W=30
-nf=6
+nf=4
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
@@ -213,7 +213,7 @@ C {devices/lab_pin.sym} -240 810 2 1 {name=p18 sig_type=std_logic lab=VG}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} -180 810 0 0 {name=M3
 L=0.5
 W=60
-nf=12
+nf=8
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
@@ -228,7 +228,7 @@ C {devices/lab_pin.sym} -20 810 2 1 {name=p20 sig_type=std_logic lab=VG}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 40 810 0 0 {name=M6
 L=0.5
 W=90
-nf=18
+nf=12
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
@@ -243,7 +243,7 @@ C {devices/lab_pin.sym} 220 810 2 1 {name=p22 sig_type=std_logic lab=VG}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 280 810 0 0 {name=M8
 L=0.5
 W=120
-nf=24
+nf=16
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"

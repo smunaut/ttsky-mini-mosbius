@@ -116,7 +116,7 @@ C {devices/lab_pin.sym} -140 100 0 0 {name=p17 sig_type=std_logic lab=GND}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 300 -230 0 1 {name=M1
 L=1
 W=60
-nf=12
+nf=8
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
@@ -130,7 +130,7 @@ spiceprefix=X
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 570 -230 0 0 {name=M2
 L=1
 W=60
-nf=12
+nf=8
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
