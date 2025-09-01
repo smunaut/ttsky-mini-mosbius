@@ -1,5 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
-}
+v {xschem version=3.4.8RC file_version=1.2}
 G {}
 K {}
 V {}
@@ -98,17 +97,11 @@ lab=GND}
 N 440 710 620 710 {
 lab=Vs}
 N 100 -80 180 -80 {
-lab=Vs}
-N 180 -80 180 20 {
-lab=Vs}
+lab=#net1}
 N 300 -80 380 -80 {
-lab=Vs}
-N 380 -80 380 20 {
-lab=Vs}
+lab=#net2}
 N 500 -80 580 -80 {
-lab=Vs}
-N 580 -80 580 20 {
-lab=Vs}
+lab=#net3}
 N 500 20 580 20 {
 lab=Vs}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 80 -80 0 0 {name=M1
@@ -176,3 +169,6 @@ C {devices/lab_pin.sym} 620 550 0 1 {name=p16 sig_type=std_logic lab=Vd_2x}
 C {devices/lab_pin.sym} 620 710 0 1 {name=p17 sig_type=std_logic lab=Vs}
 C {devices/lab_pin.sym} 300 -200 3 1 {name=p18 sig_type=std_logic lab=Vd_1x}
 C {devices/lab_pin.sym} 500 -200 3 1 {name=p19 sig_type=std_logic lab=Vd_2x}
+C {devices/lab_pin.sym} 180 -80 1 1 {name=p20 sig_type=std_logic lab=GND}
+C {devices/lab_pin.sym} 380 -80 1 1 {name=p21 sig_type=std_logic lab=GND}
+C {devices/lab_pin.sym} 580 -80 1 1 {name=p22 sig_type=std_logic lab=GND}

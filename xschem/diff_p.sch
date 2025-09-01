@@ -1,14 +1,13 @@
-v {xschem version=3.1.0 file_version=1.2
-}
+v {xschem version=3.4.8RC file_version=1.2}
 G {}
 K {}
 V {}
 S {}
 E {}
 N 240 -170 300 -170 {
-lab=itail}
+lab=VAPWR}
 N 520 -170 580 -170 {
-lab=itail}
+lab=VAPWR}
 N 140 -170 200 -170 {
 lab=inp}
 N 620 -170 680 -170 {
@@ -79,10 +78,6 @@ N 240 -260 580 -260 {
 lab=itail}
 N 240 -260 240 -200 {
 lab=itail}
-N 300 -260 300 -170 {
-lab=itail}
-N 520 -260 520 -170 {
-lab=itail}
 N 420 -320 420 -260 {
 lab=itail}
 N 1100 -230 1100 -140 {
@@ -131,6 +126,8 @@ N 1500 380 1500 440 {
 lab=VAPWR}
 N 1460 440 1500 440 {
 lab=VAPWR}
+N 420 -170 520 -170 {lab=VAPWR}
+N 300 -170 420 -170 {lab=VAPWR}
 C {tt_asw_3v3.sym} 1310 160 0 0 {name=x4}
 C {tt_asw_3v3.sym} 1310 290 0 0 {name=x5}
 C {devices/lab_pin.sym} 1120 120 0 0 {name=p25 sig_type=std_logic lab=ctrl_tail[0]}
@@ -233,3 +230,4 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} 1040 -230 0 0 {name=p23 sig_type=std_logic lab=vbias}
 C {devices/lab_pin.sym} 1050 -360 0 0 {name=p17 sig_type=std_logic lab=VAPWR}
+C {devices/lab_pin.sym} 420 -170 3 0 {name=p18 sig_type=std_logic lab=VAPWR}

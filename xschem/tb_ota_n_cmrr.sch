@@ -1,5 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
-}
+v {xschem version=3.4.8RC file_version=1.2}
 G {}
 K {}
 V {}
@@ -54,29 +53,32 @@ lab=VIN}
 N 160 -140 190 -140 {
 lab=ctrl_tail[1:0]}
 N 160 -120 190 -120 {
-lab=ctrl_diode}
+lab=ctrl_mode[1:0]}
 N -590 570 -590 590 {
 lab=ctrl_tail[1]}
 N -490 570 -490 590 {
 lab=ctrl_tail[0]}
 N -390 570 -390 590 {
-lab=ctrl_diode}
-N 390 -230 470 -230 {
+lab=ctrl_mode[1]}
+N 460 -210 460 -190 {
 lab=Vout}
-N 460 -230 460 -210 {
-lab=Vout}
-N 460 -150 460 -130 {
+N 460 -130 460 -110 {
 lab=GND}
 N -110 -160 -110 -110 {
 lab=VIN}
 N -110 -50 -110 0 {
 lab=Vcm}
-N 470 -230 540 -230 {
+N 470 -210 540 -210 {
 lab=Vout}
-N 600 -230 640 -230 {
+N 600 -210 640 -210 {
 lab=Vcm}
 N 20 -230 20 -210 {
 lab=VIN}
+N -310 570 -310 590 {
+lab=ctrl_mode[0]}
+N 460 -210 470 -210 {lab=Vout}
+N 430 -210 460 -210 {lab=Vout}
+N 390 -210 430 -210 {lab=Vout}
 C {ota_n.sym} -50 -200 0 0 {name=x1}
 C {devices/gnd.sym} 190 -50 0 0 {name=l11 lab=GND}
 C {devices/vsource.sym} -590 340 0 0 {name=VAPWR value=3.3}
@@ -99,19 +101,19 @@ C {devices/lab_pin.sym} 160 -160 0 0 {name=p9 sig_type=std_logic lab=vbias}
 C {devices/vsource.sym} -110 30 0 0 {name=VCM value=2}
 C {devices/gnd.sym} -110 60 0 0 {name=l5 lab=GND}
 C {devices/lab_pin.sym} 160 -140 0 0 {name=p11 sig_type=std_logic lab=ctrl_tail[1:0]}
-C {devices/lab_pin.sym} 160 -120 0 0 {name=p12 sig_type=std_logic lab=ctrl_diode}
+C {devices/lab_pin.sym} 160 -120 0 0 {name=p12 sig_type=std_logic lab=ctrl_mode[1:0]}
 C {devices/vsource.sym} -590 620 0 0 {name=VCT1 value=1.8}
 C {devices/gnd.sym} -590 650 0 0 {name=l9 lab=GND}
 C {devices/vsource.sym} -490 620 0 0 {name=VCT0 value=1.8}
 C {devices/gnd.sym} -490 650 0 0 {name=l10 lab=GND}
 C {devices/lab_pin.sym} -590 570 3 1 {name=p13 sig_type=std_logic lab=ctrl_tail[1]}
 C {devices/lab_pin.sym} -490 570 3 1 {name=p14 sig_type=std_logic lab=ctrl_tail[0]}
-C {devices/vsource.sym} -390 620 0 0 {name=VCD value=1.8}
+C {devices/vsource.sym} -390 620 0 0 {name=VCD1 value=0}
 C {devices/gnd.sym} -390 650 0 0 {name=l13 lab=GND}
-C {devices/lab_pin.sym} -390 570 3 1 {name=p15 sig_type=std_logic lab=ctrl_diode}
+C {devices/lab_pin.sym} -390 570 3 1 {name=p15 sig_type=std_logic lab=ctrl_mode[1]}
 C {devices/vsource.sym} -110 -80 0 0 {name=VIN value="AC 1"}
 C {devices/lab_pin.sym} -110 -160 0 1 {name=p16 sig_type=std_logic lab=VIN}
-C {devices/ind.sym} 570 -230 1 0 {name=L6
+C {devices/ind.sym} 570 -210 1 0 {name=L6
 m=1
 value=1T
 footprint=1206
@@ -132,7 +134,6 @@ C {devices/code_shown.sym} 790 -240 0 0 {name=NGSPICE only_toplevel=true value=
    alter VCM 2
    alter VCT1 0
    alter VCT0 0
-   alter VCD 0
    repeat 2
       repeat 2
          ac dec 51 10k 10G
@@ -145,13 +146,16 @@ C {devices/code_shown.sym} 790 -240 0 0 {name=NGSPICE only_toplevel=true value=
 *   plot ph(ac1.v(Vout))/PI*180 ph(ac2.v(Vout))/PI*180 ph(ac3.v(Vout))/PI*180 ph(ac4.v(Vout))/PI*180
 .endc
 "}
-C {devices/lab_pin.sym} 460 -230 3 1 {name=p10 sig_type=std_logic lab=Vout}
+C {devices/lab_pin.sym} 460 -210 3 1 {name=p10 sig_type=std_logic lab=Vout}
 C {devices/lab_pin.sym} -110 -20 0 1 {name=p18 sig_type=std_logic lab=Vcm}
 C {devices/lab_pin.sym} -100 -230 0 0 {name=p19 sig_type=std_logic lab=VIN}
-C {devices/capa.sym} 460 -180 2 0 {name=C2
+C {devices/capa.sym} 460 -160 2 0 {name=C2
 m=1
 value=10p
 footprint=1206
 device="ceramic capacitor"}
-C {devices/gnd.sym} 460 -130 0 0 {name=l12 lab=GND}
-C {devices/lab_pin.sym} 640 -230 0 1 {name=p17 sig_type=std_logic lab=Vcm}
+C {devices/gnd.sym} 460 -110 0 0 {name=l12 lab=GND}
+C {devices/lab_pin.sym} 640 -210 0 1 {name=p17 sig_type=std_logic lab=Vcm}
+C {devices/vsource.sym} -310 620 0 0 {name=VCD0 value=1.8}
+C {devices/gnd.sym} -310 650 0 0 {name=l7 lab=GND}
+C {devices/lab_pin.sym} -310 570 3 1 {name=p20 sig_type=std_logic lab=ctrl_mode[0]}

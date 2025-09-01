@@ -1,5 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
-}
+v {xschem version=3.4.8RC file_version=1.2}
 G {}
 K {type=subcircuit
 format="@name @pinlist @symname"
@@ -21,6 +20,7 @@ L 4 260 130 420 130 {}
 L 4 260 -110 420 -110 {}
 L 4 260 -140 260 130 {}
 L 4 420 -140 420 130 {}
+L 4 420 -10 440 -10 {}
 L 7 240 -100 260 -100 {}
 L 7 240 -80 260 -80 {}
 L 7 240 40 260 40 {}
@@ -28,20 +28,22 @@ L 7 240 110 260 110 {}
 B 5 237.5 -102.5 242.5 -97.5 {name=VAPWR dir=inout }
 B 5 237.5 -82.5 242.5 -77.5 {name=VDPWR dir=inout }
 B 5 237.5 -32.5 242.5 -27.5 {name=inp dir=in }
-B 5 437.5 -32.5 442.5 -27.5 {name=out dir=out }
+B 5 437.5 -32.5 442.5 -27.5 {name=outp dir=out }
 B 5 237.5 -12.5 242.5 -7.5 {name=inm dir=in }
 B 5 237.5 57.5 242.5 62.5 {name=ctrl_tail[1:0] dir=in }
-B 5 237.5 77.5 242.5 82.5 {name=ctrl_diode dir=in }
+B 5 237.5 77.5 242.5 82.5 {name=ctrl_mode[1:0] dir=in }
 B 5 237.5 37.5 242.5 42.5 {name=vbias dir=inout }
 B 5 237.5 107.5 242.5 112.5 {name=GND dir=inout }
+B 5 437.5 -12.5 442.5 -7.5 {name=outm dir=out }
 T {@symname} 289.5 -136 0 0 0.3 0.3 {}
 T {@name} 375 -162 0 0 0.2 0.2 {}
 T {VAPWR} 265 -104 0 0 0.2 0.2 {}
 T {VDPWR} 265 -84 0 0 0.2 0.2 {}
 T {inp} 265 -34 0 0 0.2 0.2 {}
-T {out} 415 -34 0 1 0.2 0.2 {}
+T {outp} 415 -34 0 1 0.2 0.2 {}
 T {inm} 265 -14 0 0 0.2 0.2 {}
 T {ctrl_tail[1:0]} 265 56 0 0 0.2 0.2 {}
-T {ctrl_diode} 265 76 0 0 0.2 0.2 {}
+T {ctrl_mode[1:0]} 265 76 0 0 0.2 0.2 {}
 T {vbias} 265 36 0 0 0.2 0.2 {}
 T {GND} 265 106 0 0 0.2 0.2 {}
+T {outm} 415 -14 0 1 0.2 0.2 {}

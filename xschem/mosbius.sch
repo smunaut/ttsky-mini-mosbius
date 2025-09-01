@@ -1,5 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
-}
+v {xschem version=3.4.8RC file_version=1.2}
 G {}
 K {}
 V {}
@@ -17,6 +16,7 @@ T {NMOS (BUS A)} 190 -640 0 0 1 1 {}
 T {PMOS (BUS A)} 940 -640 0 0 1 1 {}
 T {NMOS (BUS B)} 180 -170 0 0 1 1 {}
 T {PMOS (BUS B)} 930 -170 0 0 1 1 {}
+T {POWER Connections} 2750 690 0 0 1 1 {}
 N 310 -2050 340 -2050 {
 lab=VAPWR}
 N 310 -2030 340 -2030 {
@@ -70,20 +70,6 @@ lab=VAPWR}
 N 1030 -10 1060 -10 {
 lab=VDPWR}
 N 1030 150 1060 150 {
-lab=VGND}
-N 2330 -2610 2360 -2610 {
-lab=VAPWR}
-N 2330 -2590 2360 -2590 {
-lab=VDPWR}
-N 2330 -2530 2360 -2530 {
-lab=VGND}
-N 2330 -2550 2510 -2550 {bus=true
-lab=bus_A[6:1]}
-N 2330 -2450 2360 -2450 {
-lab=VAPWR}
-N 2330 -2430 2360 -2430 {
-lab=VDPWR}
-N 2330 -2370 2360 -2370 {
 lab=VGND}
 N 2330 -2290 2360 -2290 {
 lab=VAPWR}
@@ -174,7 +160,7 @@ lab=VGND}
 N 310 -1980 340 -1980 {
 lab=xpt_otan_inp}
 N 540 -1980 580 -1980 {
-lab=xpt_otan_out}
+lab=xpt_otan_outp}
 N 310 -1960 340 -1960 {
 lab=xpt_otan_inm}
 N 540 -1460 580 -1460 {
@@ -214,39 +200,29 @@ lab=xpt_nfetb_g}
 N 310 60 340 60 {
 lab=xpt_nfetb_s}
 N 1030 20 1060 20 {
-lab=xpt_pfetb_d}
+lab=xpt_pfetb_s}
 N 1030 40 1060 40 {
 lab=xpt_pfetb_g}
 N 1030 60 1060 60 {
-lab=xpt_pfetb_s}
+lab=xpt_pfetb_d}
 N 1030 -440 1060 -440 {
-lab=xpt_pfeta_d}
+lab=xpt_pfeta_s}
 N 1030 -420 1060 -420 {
 lab=xpt_pfeta_g}
 N 1030 -400 1060 -400 {
-lab=xpt_pfeta_s}
+lab=xpt_pfeta_d}
 N 2510 -2800 2510 -60 {bus=true
 lab=bus_A[6:1]}
-N 2330 -2570 2710 -2570 {
-lab=VAPWR}
-N 2330 -2410 2710 -2410 {
-lab=VGND}
-N 1950 -2610 2030 -2610 {bus=true
-lab=cfga_vapwr[6:1]}
-N 1950 -2450 2030 -2450 {bus=true
-lab=cfga_vgnd[6:1]}
 N 2330 -2250 2710 -2250 {
 lab=xpt_otan_inp}
 N 1950 -2290 2030 -2290 {bus=true
 lab=cfga_otan_inp[3:1]}
-N 2330 -2390 2510 -2390 {bus=true
-lab=bus_A[6:1]}
 N 2330 -2230 2500 -2230 {bus=true
 lab=bus_A[3:1]}
 N 1950 -2130 2030 -2130 {bus=true
-lab=cfga_otan_out[6:1]}
+lab=cfga_otan_outp[6:1]}
 N 2330 -2090 2710 -2090 {
-lab=xpt_otan_out}
+lab=xpt_otan_outp}
 N 2330 -1930 2710 -1930 {
 lab=xpt_mirn_a}
 N 2330 -1770 2710 -1770 {
@@ -495,16 +471,16 @@ N 3180 430 3210 430 {
 lab=VDPWR}
 N 3180 490 3210 490 {
 lab=VGND}
-N 3180 450 3360 450 {bus=true
-lab=bus_A[6:1]}
 N 3180 470 3360 470 {bus=true
+lab=bus_A[6:1]}
+N 3180 450 3360 450 {bus=true
 lab=bus_B[6:1]}
 N 2800 410 2880 410 {bus=true
 lab=cfg_bus_short[6:1]}
 N 200 -1890 340 -1890 {bus=true
 lab=ctrl_otan_tail[1:0]}
 N 200 -1870 340 -1870 {
-lab=ctrl_otan_diode}
+lab=ctrl_otan_mode[1:0]}
 N 200 -1400 340 -1400 {bus=true
 lab=ctrl_mirn_a[1:0]}
 N 200 -1380 340 -1380 {bus=true
@@ -538,7 +514,32 @@ lab=ctrl_pfetb_width[1:0]}
 N 920 100 1060 100 {
 lab=ctrl_pfetb_source}
 N 360 -2320 540 -2320 {bus=true
-lab=bus_A[5:1]}
+lab=bus_A[6:1]}
+N 540 -1960 580 -1960 {lab=xpt_otan_outm}
+N 3830 -2110 3860 -2110 {
+lab=VAPWR}
+N 3830 -2090 3860 -2090 {
+lab=VDPWR}
+N 3830 -2030 3860 -2030 {
+lab=VGND}
+N 3450 -2110 3530 -2110 {bus=true
+lab=cfgb_otan_outm[6:1]}
+N 3830 -2070 4210 -2070 {
+lab=xpt_otan_outm}
+N 3830 -2050 4010 -2050 {bus=true
+lab=bus_B[6:1]}
+N 3140 820 3170 820 {
+lab=VAPWR}
+N 3140 840 3170 840 {
+lab=VDPWR}
+N 3140 900 3170 900 {
+lab=VGND}
+N 2760 820 2840 820 {bus=true
+lab=cfg_bus_pwr[6:1]}
+N 3140 860 3170 860 {lab=bus_B[6],bus_A[4],bus_B[1],bus_A[6],bus_B[5],bus_A[2]}
+N 3140 880 3170 880 {lab=VAPWR,VAPWR,VAPWR,VGND,VGND,VGND}
+N 360 -2280 540 -2280 {bus=true
+lab=bus_B[6:1]}
 C {mirror_n.sym} 390 -1480 0 0 {name=x2}
 C {devices/lab_pin.sym} 310 -2050 0 0 {name=p1 sig_type=std_logic lab=VAPWR}
 C {devices/lab_pin.sym} 310 -2030 0 0 {name=p2 sig_type=std_logic lab=VDPWR}
@@ -567,14 +568,6 @@ C {devices/lab_pin.sym} 1030 -310 0 0 {name=p24 sig_type=std_logic lab=VGND}
 C {devices/lab_pin.sym} 1030 -30 0 0 {name=p25 sig_type=std_logic lab=VAPWR}
 C {devices/lab_pin.sym} 1030 -10 0 0 {name=p26 sig_type=std_logic lab=VDPWR}
 C {devices/lab_pin.sym} 1030 150 0 0 {name=p27 sig_type=std_logic lab=VGND}
-C {tt_asw_3v3.sym} 2180 -2570 0 0 {name=x10[6:1]}
-C {devices/lab_pin.sym} 2360 -2610 0 1 {name=p28 sig_type=std_logic lab=VAPWR}
-C {devices/lab_pin.sym} 2360 -2590 0 1 {name=p29 sig_type=std_logic lab=VDPWR}
-C {devices/lab_pin.sym} 2360 -2530 0 1 {name=p30 sig_type=std_logic lab=VGND}
-C {tt_asw_3v3.sym} 2180 -2410 0 0 {name=x11[6:1]}
-C {devices/lab_pin.sym} 2360 -2450 0 1 {name=p31 sig_type=std_logic lab=VAPWR}
-C {devices/lab_pin.sym} 2360 -2430 0 1 {name=p32 sig_type=std_logic lab=VDPWR}
-C {devices/lab_pin.sym} 2360 -2370 0 1 {name=p33 sig_type=std_logic lab=VGND}
 C {tt_asw_3v3.sym} 2180 -2250 0 0 {name=x12[3:1]}
 C {devices/lab_pin.sym} 2360 -2290 0 1 {name=p34 sig_type=std_logic lab=VAPWR}
 C {devices/lab_pin.sym} 2360 -2270 0 1 {name=p35 sig_type=std_logic lab=VDPWR}
@@ -631,10 +624,10 @@ C {tt_asw_3v3.sym} 2180 -170 0 0 {name=x25[6:1]}
 C {devices/lab_pin.sym} 2360 -210 0 1 {name=p73 sig_type=std_logic lab=VAPWR}
 C {devices/lab_pin.sym} 2360 -190 0 1 {name=p74 sig_type=std_logic lab=VDPWR}
 C {devices/lab_pin.sym} 2360 -130 0 1 {name=p75 sig_type=std_logic lab=VGND}
-C {devices/lab_pin.sym} 2710 -2090 0 1 {name=p111 sig_type=std_logic lab=xpt_otan_out}
+C {devices/lab_pin.sym} 2710 -2090 0 1 {name=p111 sig_type=std_logic lab=xpt_otan_outp}
 C {devices/lab_pin.sym} 310 -1980 0 0 {name=p112 sig_type=std_logic lab=xpt_otan_inp}
 C {devices/lab_pin.sym} 310 -1960 0 0 {name=p113 sig_type=std_logic lab=xpt_otan_inm}
-C {devices/lab_pin.sym} 580 -1980 0 1 {name=p114 sig_type=std_logic lab=xpt_otan_out}
+C {devices/lab_pin.sym} 580 -1980 0 1 {name=p114 sig_type=std_logic lab=xpt_otan_outp}
 C {devices/lab_pin.sym} 580 -1460 0 1 {name=p115 sig_type=std_logic lab=xpt_mirn_a}
 C {devices/lab_pin.sym} 2710 -2250 0 1 {name=p116 sig_type=std_logic lab=xpt_otan_inp}
 C {devices/lab_pin.sym} 580 -1440 0 1 {name=p109 sig_type=std_logic lab=xpt_mirn_b}
@@ -669,8 +662,6 @@ C {devices/lab_pin.sym} 1030 20 0 0 {name=p155 sig_type=std_logic lab=xpt_pfetb_
 C {devices/lab_pin.sym} 1030 -400 0 0 {name=p156 sig_type=std_logic lab=xpt_pfeta_d}
 C {devices/lab_pin.sym} 1030 -420 0 0 {name=p157 sig_type=std_logic lab=xpt_pfeta_g}
 C {devices/lab_pin.sym} 1030 -440 0 0 {name=p158 sig_type=std_logic lab=xpt_pfeta_s}
-C {devices/lab_pin.sym} 2710 -2570 0 1 {name=p165 sig_type=std_logic lab=VAPWR}
-C {devices/lab_pin.sym} 2710 -2410 0 1 {name=p166 sig_type=std_logic lab=VGND}
 C {devices/lab_pin.sym} 2710 -490 0 1 {name=p168 sig_type=std_logic lab=xpt_pfeta_d}
 C {devices/lab_pin.sym} 2710 -330 0 1 {name=p169 sig_type=std_logic lab=xpt_pfeta_g}
 C {devices/lab_pin.sym} 2710 -170 0 1 {name=p170 sig_type=std_logic lab=xpt_pfeta_s}
@@ -681,10 +672,8 @@ C {devices/lab_wire.sym} 2450 -1590 0 0 {name=p172 sig_type=std_logic lab=bus_A[
 C {devices/lab_wire.sym} 2450 -1270 0 0 {name=p173 sig_type=std_logic lab=bus_A[3:1]}
 C {devices/bus_connect_nolab.sym} 2500 -1590 0 0 {name=r2}
 C {devices/bus_connect_nolab.sym} 2500 -1270 0 0 {name=r3}
-C {devices/ipin.sym} 1950 -2610 0 0 {name=p174 lab=cfga_vapwr[6:1]}
-C {devices/ipin.sym} 1950 -2450 0 0 {name=p175 lab=cfga_vgnd[6:1]}
 C {devices/ipin.sym} 1950 -2290 0 0 {name=p176 lab=cfga_otan_inp[3:1]}
-C {devices/ipin.sym} 1950 -2130 0 0 {name=p177 lab=cfga_otan_out[6:1]}
+C {devices/ipin.sym} 1950 -2130 0 0 {name=p177 lab=cfga_otan_outp[6:1]}
 C {devices/ipin.sym} 1950 -1970 0 0 {name=p178 lab=cfga_mirn_a[6:1]}
 C {devices/ipin.sym} 1950 -1810 0 0 {name=p179 lab=cfga_mirp_a[6:1]}
 C {devices/ipin.sym} 1950 -1650 0 0 {name=p180 lab=cfga_dpn_inp[3:1]}
@@ -794,10 +783,10 @@ C {devices/lab_pin.sym} 3210 410 0 1 {name=p86 sig_type=std_logic lab=VAPWR}
 C {devices/lab_pin.sym} 3210 430 0 1 {name=p87 sig_type=std_logic lab=VDPWR}
 C {devices/lab_pin.sym} 3210 490 0 1 {name=p162 sig_type=std_logic lab=VGND}
 C {devices/ipin.sym} 2800 410 0 0 {name=p197 lab=cfg_bus_short[6:1]}
-C {devices/lab_pin.sym} 3360 450 2 0 {name=p198 sig_type=std_logic lab=bus_A[6:1]}
-C {devices/lab_pin.sym} 3360 470 2 0 {name=p206 sig_type=std_logic lab=bus_B[6:1]}
+C {devices/lab_pin.sym} 3360 470 2 0 {name=p198 sig_type=std_logic lab=bus_A[6:1]}
+C {devices/lab_pin.sym} 3360 450 2 0 {name=p206 sig_type=std_logic lab=bus_B[6:1]}
 C {devices/ipin.sym} 200 -1890 0 0 {name=p207 lab=ctrl_otan_tail[1:0]}
-C {devices/ipin.sym} 200 -1870 0 0 {name=p209 lab=ctrl_otan_diode}
+C {devices/ipin.sym} 200 -1870 0 0 {name=p209 lab=ctrl_otan_mode[1:0]}
 C {devices/ipin.sym} 200 -1400 0 0 {name=p222 lab=ctrl_mirn_a[1:0]}
 C {devices/ipin.sym} 200 -1380 0 0 {name=p223 lab=ctrl_mirn_b[1:0]}
 C {devices/ipin.sym} 920 -1400 0 0 {name=p224 lab=ctrl_mirp_a[1:0]}
@@ -817,8 +806,8 @@ C {devices/ipin.sym} 920 100 0 0 {name=p237 lab=ctrl_pfetb_source}
 C {devices/iopin.sym} 360 -2460 0 1 {name=p238 lab=VAPWR}
 C {devices/iopin.sym} 360 -2420 0 1 {name=p239 lab=VDPWR}
 C {devices/iopin.sym} 360 -2380 0 1 {name=p240 lab=VGND}
-C {devices/iopin.sym} 360 -2320 0 1 {name=p241 lab=bus_A[5:1]}
-C {devices/lab_wire.sym} 520 -2320 0 0 {name=p242 sig_type=std_logic lab=bus_A[5:1]}
+C {devices/iopin.sym} 360 -2320 0 1 {name=p241 lab=bus_A[6:1]}
+C {devices/lab_wire.sym} 520 -2320 0 0 {name=p242 sig_type=std_logic lab=bus_A[6:1]}
 C {ota_n.sym} 100 -1950 0 0 {name=x1}
 C {mirror_p.sym} 1100 -1480 0 0 {name=x3}
 C {diff_n.sym} 440 -890 0 0 {name=x4}
@@ -827,3 +816,19 @@ C {nmos_prog.sym} 110 -410 0 0 {name=x6}
 C {nmos_prog.sym} 110 50 0 0 {name=x7}
 C {pmos_prog.sym} 1160 -420 0 0 {name=x8}
 C {pmos_prog.sym} 1160 40 0 0 {name=x9}
+C {devices/lab_pin.sym} 580 -1960 0 1 {name=p243 sig_type=std_logic lab=xpt_otan_outm}
+C {tt_asw_3v3.sym} 3680 -2070 0 0 {name=x1[6:1]}
+C {devices/lab_pin.sym} 3860 -2110 0 1 {name=p244 sig_type=std_logic lab=VAPWR}
+C {devices/lab_pin.sym} 3860 -2090 0 1 {name=p245 sig_type=std_logic lab=VDPWR}
+C {devices/lab_pin.sym} 3860 -2030 0 1 {name=p246 sig_type=std_logic lab=VGND}
+C {devices/ipin.sym} 3450 -2110 0 0 {name=p247 lab=cfgb_otan_outm[6:1]}
+C {devices/lab_pin.sym} 4210 -2070 0 1 {name=p248 sig_type=std_logic lab=xpt_otan_outm}
+C {tt_asw_3v3.sym} 2990 860 0 0 {name=x2[6:1]}
+C {devices/lab_pin.sym} 3170 820 0 1 {name=p249 sig_type=std_logic lab=VAPWR}
+C {devices/lab_pin.sym} 3170 840 0 1 {name=p250 sig_type=std_logic lab=VDPWR}
+C {devices/lab_pin.sym} 3170 900 0 1 {name=p251 sig_type=std_logic lab=VGND}
+C {devices/ipin.sym} 2760 820 0 0 {name=p252 lab=cfg_bus_pwr[6:1]}
+C {devices/lab_pin.sym} 3170 880 0 1 {name=p28 sig_type=std_logic lab=VAPWR,VAPWR,VAPWR,VGND,VGND,VGND}
+C {devices/lab_pin.sym} 3170 860 0 1 {name=p29 sig_type=std_logic lab=bus_B[6],bus_A[4],bus_B[1],bus_A[6],bus_B[5],bus_A[2]}
+C {devices/iopin.sym} 360 -2280 0 1 {name=p30 lab=bus_B[6:1]}
+C {devices/lab_wire.sym} 520 -2280 0 0 {name=p31 sig_type=std_logic lab=bus_B[6:1]}

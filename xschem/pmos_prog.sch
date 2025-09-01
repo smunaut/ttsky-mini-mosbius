@@ -1,5 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
-}
+v {xschem version=3.4.8RC file_version=1.2}
 G {}
 K {}
 V {}
@@ -90,17 +89,11 @@ lab=Vg}
 N 380 -70 380 -20 {
 lab=Vg}
 N 240 -70 300 -70 {
-lab=Vs}
-N 300 -160 300 -70 {
-lab=Vs}
+lab=Vd_1x}
 N 460 -70 520 -70 {
-lab=Vs}
-N 520 -160 520 -70 {
-lab=Vs}
+lab=#net1}
 N 680 -70 740 -70 {
-lab=Vs}
-N 740 -160 740 -70 {
-lab=Vs}
+lab=#net2}
 N 680 -160 740 -160 {
 lab=Vs}
 N 460 -40 460 80 {
@@ -176,3 +169,6 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} 460 80 1 1 {name=p18 sig_type=std_logic lab=Vd_1x}
 C {devices/lab_pin.sym} 680 80 1 1 {name=p19 sig_type=std_logic lab=Vd_2x}
+C {devices/lab_pin.sym} 300 -70 3 1 {name=p20 sig_type=std_logic lab=VAPWR}
+C {devices/lab_pin.sym} 520 -70 3 1 {name=p21 sig_type=std_logic lab=VAPWR}
+C {devices/lab_pin.sym} 740 -70 3 1 {name=p22 sig_type=std_logic lab=VAPWR}
