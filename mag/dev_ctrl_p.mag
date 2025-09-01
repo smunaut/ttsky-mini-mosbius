@@ -1,0 +1,137 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1756676288
+<< metal1 >>
+rect 60 428 3712 456
+<< via1 >>
+rect 340 1046 580 1130
+rect 20 502 260 586
+rect 340 -42 580 42
+<< metal2 >>
+rect 340 1130 580 1136
+rect 340 1040 580 1046
+rect 20 586 260 592
+rect 20 496 260 502
+rect 340 42 580 48
+rect 340 -48 580 -42
+<< via2 >>
+rect 345 1049 575 1127
+rect 25 505 255 583
+rect 345 -39 575 39
+<< metal3 >>
+rect 340 1130 580 1136
+rect 340 1046 341 1130
+rect 579 1046 580 1130
+rect 340 1040 580 1046
+rect 20 586 260 592
+rect 20 502 21 586
+rect 259 502 260 586
+rect 20 496 260 502
+rect 0 372 3680 432
+rect 0 242 3680 302
+rect 0 112 3680 172
+rect 340 42 580 48
+rect 340 -42 341 42
+rect 579 -42 580 42
+rect 340 -48 580 -42
+<< via3 >>
+rect 341 1127 579 1130
+rect 341 1049 345 1127
+rect 345 1049 575 1127
+rect 575 1049 579 1127
+rect 341 1046 579 1049
+rect 21 583 259 586
+rect 21 505 25 583
+rect 25 505 255 583
+rect 255 505 259 583
+rect 21 502 259 505
+rect 341 39 579 42
+rect 341 -39 345 39
+rect 345 -39 575 39
+rect 575 -39 579 39
+rect 341 -42 579 -39
+<< metal4 >>
+rect 20 586 260 1136
+rect 20 502 21 586
+rect 259 502 260 586
+rect 20 -48 260 502
+rect 340 1130 580 1136
+rect 340 1046 341 1130
+rect 579 1046 580 1130
+rect 340 42 580 1046
+rect 340 -42 341 42
+rect 579 -42 580 42
+rect 340 -48 580 -42
+use sky130_fd_sc_hd__decap_6  sky130_fd_sc_hd__decap_6_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
+timestamp 1755005639
+transform 1 0 2392 0 1 0
+box -38 -48 590 592
+use sky130_fd_sc_hd__decap_6  sky130_fd_sc_hd__decap_6_1
+timestamp 1755005639
+transform 1 0 3128 0 1 0
+box -38 -48 590 592
+use sky130_fd_sc_hd__decap_6  sky130_fd_sc_hd__decap_6_2
+timestamp 1755005639
+transform 1 0 2392 0 -1 1088
+box -38 -48 590 592
+use sky130_fd_sc_hd__decap_6  sky130_fd_sc_hd__decap_6_3
+timestamp 1755005639
+transform 1 0 3128 0 -1 1088
+box -38 -48 590 592
+use sky130_fd_sc_hd__decap_12  sky130_fd_sc_hd__decap_12_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
+timestamp 1755005639
+transform 1 0 0 0 1 0
+box -38 -48 1142 592
+use sky130_fd_sc_hd__decap_12  sky130_fd_sc_hd__decap_12_1
+timestamp 1755005639
+transform 1 0 1288 0 1 0
+box -38 -48 1142 592
+use sky130_fd_sc_hd__decap_12  sky130_fd_sc_hd__decap_12_2
+timestamp 1755005639
+transform 1 0 0 0 -1 1088
+box -38 -48 1142 592
+use sky130_fd_sc_hd__decap_12  sky130_fd_sc_hd__decap_12_3
+timestamp 1755005639
+transform 1 0 1288 0 -1 1088
+box -38 -48 1142 592
+use sky130_fd_sc_hd__fill_1  sky130_fd_sc_hd__fill_1_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
+timestamp 1755005639
+transform 1 0 1104 0 1 0
+box -38 -48 130 592
+use sky130_fd_sc_hd__fill_1  sky130_fd_sc_hd__fill_1_1
+timestamp 1755005639
+transform 1 0 2944 0 1 0
+box -38 -48 130 592
+use sky130_fd_sc_hd__fill_1  sky130_fd_sc_hd__fill_1_2
+timestamp 1755005639
+transform 1 0 1104 0 -1 1088
+box -38 -48 130 592
+use sky130_fd_sc_hd__fill_1  sky130_fd_sc_hd__fill_1_3
+timestamp 1755005639
+transform 1 0 2944 0 -1 1088
+box -38 -48 130 592
+use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
+timestamp 1755005639
+transform 1 0 1196 0 1 0
+box -38 -48 130 592
+use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_1
+timestamp 1755005639
+transform 1 0 3036 0 1 0
+box -38 -48 130 592
+use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_2
+timestamp 1755005639
+transform 1 0 1196 0 -1 1088
+box -38 -48 130 592
+use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_3
+timestamp 1755005639
+transform 1 0 3036 0 -1 1088
+box -38 -48 130 592
+<< labels >>
+flabel metal4 20 -48 260 1136 1 FreeSans 160 0 0 0 VDPWR
+port 1 n power input
+flabel metal4 340 -48 580 1136 1 FreeSans 160 0 0 0 VGND
+port 0 n ground input
+<< properties >>
+string FIXED_BBOX 0 0 3680 1088
+<< end >>

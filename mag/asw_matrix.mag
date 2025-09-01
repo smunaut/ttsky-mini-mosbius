@@ -1,0 +1,108 @@
+magic
+tech sky130A
+timestamp 1756676326
+use asw_col_a  asw_col_a_0
+timestamp 1756676326
+transform 1 0 1840 0 1 0
+box -19 0 1859 15455
+use asw_col_a  asw_col_a_1
+timestamp 1756676326
+transform 1 0 7360 0 1 0
+box -19 0 1859 15455
+use asw_col_a  asw_col_a_2
+timestamp 1756676326
+transform 1 0 9200 0 1 0
+box -19 0 1859 15455
+use asw_col_a  asw_col_a_3
+timestamp 1756676326
+transform 1 0 16560 0 1 0
+box -19 0 1859 15455
+use asw_col_a  asw_col_a_4
+timestamp 1756676326
+transform 1 0 18400 0 1 0
+box -19 0 1859 15455
+use asw_col_a  asw_col_a_5
+timestamp 1756676326
+transform 1 0 23920 0 1 0
+box -19 0 1859 15455
+use asw_col_a  asw_col_a_6
+timestamp 1756676326
+transform 1 0 29440 0 1 0
+box -19 0 1859 15455
+use asw_col_a  asw_col_a_7
+timestamp 1756676326
+transform 1 0 33120 0 1 0
+box -19 0 1859 15455
+use asw_col_a  asw_col_a_8
+timestamp 1756676326
+transform 1 0 36800 0 1 0
+box -19 0 1859 15455
+use asw_col_a  asw_col_a_9
+timestamp 1756676326
+transform 1 0 44160 0 1 0
+box -19 0 1859 15455
+use asw_col_a  asw_col_a_10
+timestamp 1756676326
+transform 1 0 46000 0 1 0
+box -19 0 1859 15455
+use asw_col_ab  asw_col_ab_0
+timestamp 1756676326
+transform 1 0 5520 0 1 0
+box -19 0 1859 15455
+use asw_col_ab  asw_col_ab_1
+timestamp 1756676326
+transform 1 0 22080 0 1 0
+box -19 0 1859 15455
+use asw_col_ab  asw_col_ab_2
+timestamp 1756676326
+transform 1 0 27600 0 1 0
+box -19 0 1859 15455
+use asw_col_b  asw_col_b_0
+timestamp 1756676326
+transform 1 0 3680 0 1 0
+box -19 0 1859 15455
+use asw_col_b  asw_col_b_1
+timestamp 1756676326
+transform 1 0 11040 0 1 0
+box -19 0 1859 15455
+use asw_col_b  asw_col_b_2
+timestamp 1756676326
+transform 1 0 12880 0 1 0
+box -19 0 1859 15455
+use asw_col_b  asw_col_b_3
+timestamp 1756676326
+transform 1 0 14720 0 1 0
+box -19 0 1859 15455
+use asw_col_b  asw_col_b_4
+timestamp 1756676326
+transform 1 0 20240 0 1 0
+box -19 0 1859 15455
+use asw_col_b  asw_col_b_5
+timestamp 1756676326
+transform 1 0 25760 0 1 0
+box -19 0 1859 15455
+use asw_col_b  asw_col_b_6
+timestamp 1756676326
+transform 1 0 31280 0 1 0
+box -19 0 1859 15455
+use asw_col_b  asw_col_b_7
+timestamp 1756676326
+transform 1 0 34960 0 1 0
+box -19 0 1859 15455
+use asw_col_b  asw_col_b_8
+timestamp 1756676326
+transform 1 0 38640 0 1 0
+box -19 0 1859 15455
+use asw_col_b  asw_col_b_9
+timestamp 1756676326
+transform 1 0 40480 0 1 0
+box -19 0 1859 15455
+use asw_col_b  asw_col_b_10
+timestamp 1756676326
+transform 1 0 42320 0 1 0
+box -19 0 1859 15455
+use asw_col_short  asw_col_short_0
+timestamp 1756676326
+transform 1 0 0 0 1 0
+box -19 0 1859 15455
+<< end >>
